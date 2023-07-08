@@ -81,6 +81,5 @@ class GATv2Encoder(nn.Module):
             for j, conv in enumerate(inner_convs_list):
                 if not (i == self.num_outer_layers - 1 and j == self.num_inner_layers - 1):
                     x = F.dropout(x, p=self.dropout_p, training=self.training)
-                    if not self.remove_activations:
-                        x = self.gelu(x)
+                    x = self.gelu(x)
         return x
