@@ -4,10 +4,13 @@ import torch
 from torch.cuda.amp import autocast
 from transformers import BertModel
 
+from gebert.models.modules import GraphSAGEEncoder, GATv2Encoder
+
 
 class AbstractGraphSapMetricLearningModel(ABC):
     bert_encoder: BertModel
     use_intermodal_miner: bool
+    graph_encoder: [GATv2Encoder, GraphSAGEEncoder]
 
     def calc_text_loss_return_text_embeddings(self, term_1_input_ids, term_1_att_masks, term_2_input_ids,
                                               term_2_att_masks, concept_ids, batch_size):
@@ -69,3 +72,10 @@ class AbstractGraphSapMetricLearningModel(ABC):
         text_loss, hard_pairs = self.calculate_sapbert_loss(text_embed_1, text_embed_2, labels, batch_size)
 
         return text_loss
+
+    def graph_emb(self, text_embed_1, text_embed_2, adjs, batch_size, **kwargs):
+        pos_graph_emb_1 = self.graph_encoder(text_embed_1, adjs, batch_size=batch_size, **kwargs)[:batch_size]
+        pos_graph_emb_2 = self.graph_encoder(text_embed_2, adjs, batch_size=batch_size, **kwargs)[:batch_size]
+        assert pos_graph_emb_1.size()[0] == pos_graph_emb_2.size()[0] == batch_size
+
+        return pos_graph_emb_1, pos_graph_emb_2
