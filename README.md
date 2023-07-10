@@ -1,11 +1,11 @@
 # GEBERT: Graph-Enriched Biomedical Entity Representation Transformer
 
-This repository presents source code for pretraining BERT-based biomedical entity representation models on UMLS synonyms and concept graphs. The model is published at [CLEF 2023 conference] (https://clef2023.clef-initiative.eu/). 
+This repository presents source code for pretraining BERT-based biomedical entity representation models on UMLS synonyms and concept graphs. The model is published at [CLEF 2023 conference](https://clef2023.clef-initiative.eu/). 
 
 
 ## Dependencies
 
-To train GEBERT, we used Python version 3.10. Required packages are listed in requirements.txt file. [PyTorch geometric] (https://pytorch-geometric.readthedocs.io) requires the torch-cluster, torch-scatter, and torch-sparse, so we recommend to install them prior to the installation of torch-geometric.
+To train GEBERT, we used Python version 3.10. Required packages are listed in requirements.txt file. [PyTorch geometric](https://pytorch-geometric.readthedocs.io) requires the torch-cluster, torch-scatter, and torch-sparse, so we recommend to install them prior to the installation of torch-geometric.
 
 ## Data
 
@@ -29,11 +29,11 @@ python gebert/data/create_positive_triplets_dataset.py \
 
 ## GEBERT pre-training
 
-As examples of training scripts please see [graphsage_gebert_train_example.sh] (https://github.com/Andoree/GEBERT/blob/main/graphsage_gebert_train_example.sh) and [gat_gebert_train_example.sh] (https://github.com/Andoree/GEBERT/blob/main/gat_gebert_train_example.sh). To enable/disable multi-GPU training, please add/remove the "--parallel" flag. 
+As examples of training scripts please see [graphsage_gebert_train_example.sh](https://github.com/Andoree/GEBERT/blob/main/graphsage_gebert_train_example.sh) and [gat_gebert_train_example.sh](https://github.com/Andoree/GEBERT/blob/main/gat_gebert_train_example.sh). To enable/disable multi-GPU training, please add/remove the "--parallel" flag. 
 
 ## Evaluation
 
-For evaluation, we adopted the evaluation code and data from [https://github.com/insilicomedicine/Fair-Evaluation-BERT] (https://github.com/insilicomedicine/Fair-Evaluation-BERT).
+For evaluation, we adopted the evaluation code and data from [https://github.com/insilicomedicine/Fair-Evaluation-BERT](https://github.com/insilicomedicine/Fair-Evaluation-BERT).
 
 
 ## Citation
