@@ -1,7 +1,9 @@
 #!/bin/bash
 
+CUDA_VISIBLE_DEVICES=0,1
 GRAPH_DATA_DIR="data/graph_datasets/ENG_ENG_FULL"
-BASE_TEXT_ENCODER="xlm-roberta-base"
+BASE_TEXT_ENCODER="microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext"
+
 
 python gebert/training/train_gat_gebert.py --train_dir=$GRAPH_DATA_DIR \
 --text_encoder=$BASE_TEXT_ENCODER \
@@ -24,6 +26,7 @@ python gebert/training/train_gat_gebert.py --train_dir=$GRAPH_DATA_DIR \
 --weight_decay=0.01  \
 --batch_size=128 \
 --num_epochs=1 \
+--parallel \
 --amp \
 --random_seed=42 \
 --loss="ms_loss" \
@@ -32,5 +35,5 @@ python gebert/training/train_gat_gebert.py --train_dir=$GRAPH_DATA_DIR \
 --miner_margin 0.2 \
 --agg_mode "cls" \
 --save_every_N_epoch=1 \
---output_dir="result/gebert_english"
+--output_dir="results/gat_gebert_english"
 
