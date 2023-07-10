@@ -147,7 +147,7 @@ def train_graphsage_gebert(model: GraphSageGEBert, train_loader: PositivePairNei
         else:
             loss = sapbert_loss + graph_loss
             intermodal_loss = -1.
-        pbar.set_description(f"L: {float(loss):.5f} ({float(sapbert_loss):.5f} + {float(graph_loss)} + "
+        pbar.set_description(f"L: {float(loss):.5f} ({float(sapbert_loss):.5f} + {float(graph_loss):.5f} + "
                              f"{float(intermodal_loss):.5f})")
         if amp:
             scaler.scale(loss).backward()
