@@ -7,7 +7,6 @@ This repository presents source code for pretraining BERT-based biomedical entit
 We release two GEBERT versions that use GraphSAGE and GAT graph encoders, respectively. The checkpoints can be accessed via HuggingFace:
 
 [GAT-GEBERT](https://huggingface.co/andorei/gebert_eng_gat):
-
 ```
 from transformers import AutoTokenizer, AutoModel
 
@@ -16,13 +15,11 @@ model = AutoModel.from_pretrained("andorei/gebert_eng_gat")
 ```
 
 [GraphSAGE-GEBERT](https://huggingface.co/andorei/gebert_eng_graphsage):
-
 ```
 from transformers import AutoTokenizer, AutoModel
 
 tokenizer = AutoTokenizer.from_pretrained("andorei/gebert_eng_graphsage")
 model = AutoModel.from_pretrained("andorei/gebert_eng_graphsage")
-
 ```
 
 ## Dependencies
