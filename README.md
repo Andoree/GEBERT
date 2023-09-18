@@ -2,6 +2,14 @@
 
 This repository presents source code for pretraining BERT-based biomedical entity representation models on UMLS synonyms and concept graphs. The model is published at [CLEF 2023 conference](https://clef2023.clef-initiative.eu/). 
 
+# Pre-trained models
+
+We release two GEBERT versions that use GraphSAGE and GAT graph encoders, respectively. The checkpoints can be accessed via HuggingFace:
+
+[GAT-GEBERT](https://huggingface.co/andorei/gebert_eng_gat): andorei/gebert_eng_gat
+
+
+[GraphSAGE-GEBERT](https://huggingface.co/andorei/gebert_eng_graphsage): andorei/gebert_eng_graphsage
 
 ## Dependencies
 
