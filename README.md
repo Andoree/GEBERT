@@ -1,6 +1,6 @@
 # GEBERT: Graph-Enriched Biomedical Entity Representation Transformer
 
-This repository presents source code for pretraining BERT-based biomedical entity representation models on UMLS synonyms and concept graphs. The model is published at [CLEF 2023 conference](https://clef2023.clef-initiative.eu/). 
+This repository presents source code for pretraining BERT-based biomedical entity representation models on UMLS synonyms and concept graphs. The model is published at [CLEF 2023 conference](https://clef2023.clef-initiative.eu/). For pre-training details, please see our [paper](https://github.com/Andoree/GEBERT/blob/main/CLEF_2023_GeBert.pdf).
 
 # Pre-trained models
 
