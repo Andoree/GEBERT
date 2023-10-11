@@ -60,9 +60,16 @@ For evaluation, we adopted the evaluation code and data from [https://github.com
 
 ```bibtex
 @inproceedings{sakhovskiy2023gebert,
-	title={Graph-Enriched Biomedical Entity Representation Transformer},
-	author={Sakhovskiy, Andrey and Semenova, Natalia and Kadurin, Artur and Tutubalina, Elena},
-	booktitle={Proceedings of the Fourteenth International Conference of the CLEF Association (CLEF 2023)},
-	year={2023}
+author="Sakhovskiy, Andrey
+and Semenova, Natalia
+and Kadurin, Artur
+and Tutubalina, Elena",
+title="Graph-Enriched Biomedical Entity Representation Transformer",
+booktitle="Experimental IR Meets Multilinguality, Multimodality, and Interaction",
+year="2023",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="109--120",
+isbn="978-3-031-42448-9"
 }
 ```
